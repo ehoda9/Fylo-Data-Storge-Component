@@ -1,0 +1,204 @@
+:root {
+  --Gradient: ;
+
+  /* ### Neutral */
+
+  --Pale-Blue: hsl(243, 100%, 93%);
+  --Grayish-Blue: hsl(229, 7%, 55%);
+  --Dark-Blue: hsl(228, 56%, 26%);
+  --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: var(--Very-Dark-Blue);
+  background-image: url(./images/bg-desktop.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  color: white;
+}
+
+@media (max-width: 425px) {
+  body {
+    background-image: url(./images/bg-mobile.png);
+  }
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  gap: 30px;
+  margin-top: 10rem;
+}
+@media (max-width: 375px) {
+  .container {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 7rem;
+  }
+}
+
+/*  ##########################
+    #  Start Styling Header  #
+    ##########################  */
+.fylo_header {
+  padding: 40px;
+  background-color: var(--Dark-Blue);
+  width: 250px;
+  border-radius: 10px 100px 10px 10px;
+}
+
+.fylo_logo {
+  margin-bottom: 20px;
+}
+.Flyo_actions {
+  display: flex;
+  gap: 18px;
+}
+.fylo_img {
+  background-color: var(--Very-Dark-Blue);
+  border-radius: 10px;
+  padding: 13px 13px;
+}
+
+.img2 {
+  width: 22px;
+}
+/*  ######################################
+    # Start Styling Section Progress bar #
+    ######################################  */
+.Data_prog {
+  padding: 35px;
+  margin-top: 25px;
+  background-color: var(--Dark-Blue);
+  border-radius: 10px;
+  width: 550px;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .Data_prog {
+    width: 250px;
+  }
+}
+.data_prog_title {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--Grayish-Blue);
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .data_prog_title {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+.white {
+  color: var(--Pale-Blue);
+  font-weight: 700;
+}
+.prog {
+  width: 100%;
+  background-color: var(--Very-Dark-Blue);
+  height: 17px;
+  border-radius: 30px;
+  padding: 3px;
+  overflow: hidden;
+}
+.prog_popup {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  width: 150px;
+  position: absolute;
+  text-align: center;
+  bottom: 145px;
+  left: 93%;
+  transform: translateX(-93%);
+}
+.prog_popup::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 100%;
+  transform: translateX(-100%);
+  border-style: solid;
+  border-width: 20px;
+  border-color: white white transparent transparent;
+  z-index: -1;
+}
+
+.prog_popup .Size {
+  color: var(--Dark-Blue);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.prog_popup .GBleft {
+  letter-spacing: 2px;
+  color: var(--Grayish-Blue);
+  align-self: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .prog_popup::after {
+    display: none;
+  }
+  .prog_popup {
+    bottom: -30px;
+    left: 75%;
+  }
+  .prog_popup .Size {
+    font-size: 2rem;
+  }
+}
+.prog_bar {
+  display: block;
+  position: relative;
+  width: 70%;
+  height: 100%;
+  border-radius: 30px;
+  background-image: linear-gradient(to right, #ffa399, #ff4d97);
+}
+.prog_bar::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  left: 100%;
+  transform: translateX(-120%);
+  bottom: 2.5px;
+}
+
+.prog_data {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .prog_data {
+    margin-bottom: 20px;
+  }
+}
